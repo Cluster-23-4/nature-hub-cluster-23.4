@@ -1,1 +1,1 @@
-# naturehub-cluster23.4
+# nature-hub-cluster-23.4
