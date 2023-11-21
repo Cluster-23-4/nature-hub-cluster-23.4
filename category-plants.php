@@ -1,5 +1,4 @@
 <?php include('partials-front/menu.php'); ?>
-
 <?php
    //Check whether id is passed or not
    if(isset($_GET['category_id']))
@@ -25,10 +24,7 @@
       //Redirect to Home page
       header('location:'.SITEURL);
    }
-
 ?>
-
-
     <!-- Plant MEnu Section Starts Here -->
 	
 	    <section class="Plants-search text-center">
@@ -39,13 +35,11 @@
         </div>
     </section>
 	  <!-- Plant sEARCH Section Ends Here -->
-
     <section class="plant-menu">
         <div class="container">
             <h2 class="text-center">Plants Menu</h2>
 
             <?php 
-
                //Create SQL Query to Get plants based on search Category
                $sql2= "SELECT * FROM tbl_plant WHERE category_id=$category_id";
 
@@ -82,14 +76,10 @@
                               //Image Available
                               ?>
                               <img src="<?php echo SITEURL; ?>images/plant/<?php echo $image_name; ?>" alt="Pineapple" class="img-responsive img-curve">
-
                               <?php
-
                            }
-                        ?>
-                            
+                        ?>                            
                         </div>
-
                         <div class="plant-menu-desc">
                             <h4><?php echo $title; ?></h4>
                             <p class="plant-price">Rs. <?php echo $price; ?></p>
@@ -97,7 +87,6 @@
                                 <?php echo $description; ?>
                             </p>
                             <br>
-
                             <a href="<?php echo SITEURL; ?>order.php?plant_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                         </div>
                     </div> 
@@ -109,19 +98,8 @@
                    //plant not available
                    echo "<div class='error'>Plant not Available.</div>";
                }
-
-
             ?>
-
-            
-
-
             <div class="clearfix"></div>
-
-            
-
         </div>
-
     </section>
-
    <?php include('partials-front/footer.php'); ?>
