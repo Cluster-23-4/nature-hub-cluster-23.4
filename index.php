@@ -1,5 +1,4 @@
 <?php include('partials-front/menu.php'); ?>
-
     <!-- Plant sEARCH Section Starts Here -->
     <section class="Plant-search text-center">
 	
@@ -20,7 +19,6 @@
 
     </section>
     <!-- Plant sEARCH Section Ends Here -->
-
 
     <?php
        if(isset($_SESSION['order']))
@@ -75,12 +73,7 @@
 
 </section>
 
-
 <!-- How it's Works end -->
-
-
-
-
 
 <!------Welcome------->
 <section class="about-us">
@@ -100,11 +93,6 @@ Our wide range of plant options caters to every taste and preference, allowing y
 </div>
 
 </section>
-
-
-
-
-
 
 <!-----testimonials------>
 <section class="testimonials">
@@ -139,11 +127,6 @@ Our wide range of plant options caters to every taste and preference, allowing y
     </div>
 </div>
 </section>
-
-
-
-
-
 
 
     <!-- CAtegories Section Starts Here -->
@@ -207,9 +190,6 @@ Our wide range of plant options caters to every taste and preference, allowing y
 
 
             ?>
-
-            
-           
 
             <div class="clearfix"></div>
         </div>
