@@ -6,6 +6,7 @@
             <h2 class="text-center">Explore Plants</h2>
 
             <?php
+
                 //Display all the categories that are active
                 //sql Query
                 $sql =  "SELECT * FROM tbl_category WHERE active='Yes'";
@@ -40,10 +41,11 @@
                                        // Image Available
                                        ?>
                                        <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name;  ?>" alt="Fruit" class="img-responsive img-curve">
+
                                        <?php
                                    }
-                                ?>                      
-                                <h3 class="explore-plant13 text-explore"><?php echo $title; ?></h3>
+                                ?>
+                                <h3 class="float-text1 text-white layer"><?php echo $title; ?></h3>
                             </div>
                         </a>
                         <?php
@@ -54,9 +56,11 @@
                     // categories not Available
                     echo "<div class='error'>Category not found.</div>";
                 }
+
             ?>
             <div class="clearfix"></div>
         </div>
     </section>
     <!-- Categories Section Ends Here -->
+
 <?php include('partials-front/footer.php'); ?>
