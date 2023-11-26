@@ -1,5 +1,4 @@
 <?php
-
     $con = mysqli_connect("localhost","root","","plant-order");
 
     if(!$con){
@@ -22,6 +21,4 @@
         echo 'your record added successfully...';
     }
     mysqli_close($con);
-	
-
 ?>
