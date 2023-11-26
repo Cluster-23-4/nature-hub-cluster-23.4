@@ -1,4 +1,5 @@
 <?php include('partials-front/menu.php'); ?>
+
    <?php
       // check whether plant id is set or not
       if(isset($_GET['plant_id']))
@@ -28,7 +29,7 @@
           {
               // plant not Available
               //Redirect to home page
-              header('location'.SITEURL);
+              header('location:'.SITEURL);
           }
       }
       else
@@ -39,13 +40,17 @@
    ?>
     <!-- plant sEARCH Section Starts Here -->
     <section class="plantsorder-search">
-        <div class="container">          
+        <div class="container">
+            
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+
             <form action="" method="POST" class="order">
                 <fieldset>
                     <legend>Selected Plant</legend>
+
                     <div class="plant-menu-img">
                         <?php
+
                         //Check whether the image is available or not 
                         if($image_name=="")
                         {
@@ -60,8 +65,9 @@
 
                             <?php
                         }
-                        ?>                        
-                    </div>    
+                        ?>               
+                    </div>
+    
                     <div class="plant-menu-desc">
                         <h3><?php echo $title; ?></h3>
 
@@ -71,9 +77,9 @@
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
 
                         <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>                        
+                        <input type="number" name="qty" class="input-responsive" min="1" value="1" required>                      
                     </div>
-                </fieldset>        
+                </fieldset>                
                 <fieldset>
                     <legend>Delivery Details</legend>
                     <div class="order-label">Full Name</div>
@@ -92,13 +98,10 @@
                 </fieldset>
             </form>
             <?php
-
                // Check whether submit button is checked or not
                if(isset($_POST['submit']))
                {
-
                 // Get all the details from the form
-
                 $plant = $_POST['plant'];
                 $price = $_POST['price'];
                 $qty = $_POST['qty'];
@@ -116,7 +119,6 @@
 
                 //Save the order in Database
                 //Create SQL to save the data
-
                 $sql2 = "INSERT INTO tbl_order SET
                 plant ='$plant',
                 price ='$price',
@@ -127,11 +129,9 @@
                 customer_name='$customer_name',
                 customer_contact='$customer_contact',
                 customer_email ='$customer_email',
-                customer_address = '$customer_address'
-                ";       
+                customer_address = '$customer_address'";        
                  //execute the query
-                 $res2 = mysqli_query($conn, $sql2);
-                 
+                 $res2 = mysqli_query($conn, $sql2);                 
                  //Check whether query executed successfully or not
                  if($res2==true)
                  {
@@ -150,5 +150,4 @@
         </div>
     </section>
     <!-- plants sEARCH Section Ends Here -->
-
 <?php include('partials-front/footer.php'); ?>
