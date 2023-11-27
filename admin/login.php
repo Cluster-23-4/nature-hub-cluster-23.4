@@ -68,8 +68,16 @@ if(isset($_POST['submit']))
     //Process for login
     //1.Get the Data form Login Form 
 	
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    //SQL Injection-----------
+    // $username = $_POST['username'];
+    // $password = md5($_POST['password']);
+
+      $username = mysqli_real_escape_string($conn, $_POST['username']);
+
+      $raw_password = md5($_POST['password']);
+
+      $password = mysqli_real_escape_string($conn, $raw_password);
+
 
     
     //2.SQL to Whether the user with username and password exists or not
