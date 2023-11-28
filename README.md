@@ -1,6 +1,6 @@
 # nature-hub-cluster-23.4
-Add the front -end and back-end of the Nature Hub-plant delevering system.
-Add the screen shots of user interfacse.
+Add the front -end and back-end of the Nature Hub-plant delivering system.
+Add the screenshots of user interfaces.
 
 
 
