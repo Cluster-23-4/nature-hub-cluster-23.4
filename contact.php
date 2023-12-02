@@ -44,7 +44,7 @@
         </div>
         <div class="contact-col">
 
-        <form action="form-hadler.php" method="post">
+        <form action="hadler-php-file/form-hadler.php" method="post">
            <input type="text"name="name" id="name"placeholder="Enter your name"  required>
            <input type="email" name="email"  id="email"placeholder="Enter your Email address"  required>
            <input type="text"name="place"   id="place"placeholder="Enter your Place"  required>
