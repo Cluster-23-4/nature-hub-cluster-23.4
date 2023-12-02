@@ -1,4 +1,7 @@
 # nature-hub-cluster-23.4
+
+Nature Hub is the plant delivering system.
+The customer can order the plants.
 Add the front -end and back-end of the Nature Hub-plant delivering system.
 Add the screenshots of user interfaces.
 
