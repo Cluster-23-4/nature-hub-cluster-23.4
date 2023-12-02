@@ -364,6 +364,15 @@ color: #06E344;
 }
 
 /* CSS for Categories */
+.categories-search{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/categbg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 7% 0;
+
+}
+
 .categories{
     padding: 4% 0;
 	
@@ -379,7 +388,7 @@ color: #06E344;
 /* CSS for Plant Menu */
 
 .Plants-search{
-    background-image: url(../images/plant-banner.jpg);
+    background-image: linear-gradient(rgba(4, 18, 68, 0.7), rgba(159, 198, 185, 0.7)),url(../images/plant-banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -534,6 +543,93 @@ font-size:45px;
     box-sizing: border-box;
 }
 
+
+/*----------  Our Blog  --------*/
+.container h1 {
+    font-size: 45px;
+}
+
+.Plants-blog {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/Welcome.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.blog-content {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left {
+    flex-basis: 65;
+}
+
+.blog-left img {
+    width: 100%;
+}
+
+.blog-left h2 {
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.blog-left p {
+    color: #999;
+    padding: 0;
+}
+.queries-col{
+    margin: 1%;
+   
+}
+.queries-col img{
+    border-radius: 15px;
+
+}
+
+.comment-box {
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+
+.comment-box h3 {
+    text-align: left;
+
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+
+}
+
+.comment-form button {
+    margin: 10px 0;
+}
+
+.container h2{
+    font-family:sans-serif;
+   
+  
+   
+   
+    
+}
+.container h3{
+    font-family:url(../fonts/ubuntu/Ubuntu-Regular.ttf);
+    
+}
+
 /* CSS for Mobile Size or Smaller Screen */
 
 @media only screen and (max-width:768px){
@@ -590,3 +686,5 @@ font-size:45px;
         width: 100%;
     }
 }
+
+
