@@ -36,9 +36,6 @@
                 $customer_email = $row['customer_email'];
                 $customer_address = $row['customer_address'];
 
-
-
-
               }
               else
               {
@@ -46,18 +43,13 @@
                 //Redirect to manage order
                 header('location:'.SITEURL.'admin/manage-order.php');
               }
-
-
           }
           else
           {
             //Redirect to manage order page
             header('location:'.SITEURL.'admin/manage-order.php');
-
           }
-
         ?>
-
         <form action="" method="POST">
             <table class="tbl-30">
                 <tr>
@@ -65,19 +57,40 @@
                     <td><b> <?php echo $plant; ?> </b></td>
                 </tr>
                 
-
                 <tr>
                     <td>Price</td>
-                    <td>
-                         <b> <?php echo $price; ?> </b>
-                    </td>
+                    <td><b> <?php echo $price; ?> </b></td>
                 </tr>
                 
-
                 <tr>
                     <td>Qty</td>
+                    <td><b> <?php echo $qty; ?> </b></td>
+                </tr>
+
+                <tr>
+                    <td>Customer Name:</td>
                     <td>
-                        <input type="number" name="qty" value="<?php echo $qty; ?>">
+                        <b><?php echo $customer_name; ?> </b></td>
+                </tr>
+
+                <tr>
+                    <td>Customer Contact:</td>
+                    <td>
+                        <b><?php echo $customer_contact; ?></b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Customer Email:</td>
+                    <td>
+                        <b><?php echo $customer_email; ?></b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Customer Address:</td>
+                    <td>
+                        <b><?php echo $customer_address; ?></b>
                     </td>
                 </tr>
 
@@ -94,40 +107,18 @@
                 </tr>
 
                 <tr>
-                    <td>Customer Name:</td>
-                    <td>
-                        <input type="text"name="customer_name" value="<?php echo $customer_name; ?>" >
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Contact:</td>
-                    <td>
-                        <input type="text"name="customer_contact" value="<?php echo $customer_contact; ?>" >
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Email:</td>
-                    <td>
-                        <textarea name="customer_email"  cols="30" rows="5" ><?php echo $customer_email; ?></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Customer Address:</td>
-                    <td>
-                        <input type="text"name="customer_address" value="<?php echo $customer_address; ?>" >
-                    </td>
-                </tr>
-
-                <tr>
                     <td colspan="2">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
+                        <input type="hidden" name="price" value="<?php echo $plant; ?>">
+                        <input type="hidden" name="price" value="<?php echo $qty; ?>">
+                        <input type="hidden" name="price" value="<?php echo $customer_name; ?>">
+                        <input type="hidden" name="price" value="<?php echo $customer_contact; ?>">
+                        <input type="hidden" name="price" value="<?php echo $customer_email; ?>">
+                        <input type="hidden" name="price" value="<?php echo $customer_address; ?>">
+                     
                         <input type="submit" name="submit" value="Update_Order"class="btn-secondary1">
-                    </td>
-                    <td></td>
+                    </td>                 
                 </tr>
 
             </table>
@@ -137,33 +128,15 @@
             //Check whether update button is clicked or not
             if(isset($_POST['submit']))
             {
-                //echo "Clicked";
-                //Get all the values from form
+                //Get  the values from form
                 $id = $_POST['id'];
-                $plant = $_POST['plant'];
-                $price = $_POST['price'];
-                $qty = $_POST['qty'];
-                $total = $price*$qty;
-
                 $status = $_POST['status'];
 
-                $customer_name = $_POST['customer_name'];
-                $customer_contact = $_POST['customer_contact'];
-                $customer_email = $_POST['customer_email'];
-                $customer_address = $_POST['customer_address'];
-
                 //Update the values
-                $sql2 = "UPDATE tbl_order SET
-                    qty =$qty,
-                    total = '$total',
-                    status = '$status',
-                    customer_name='$customer_name',
-                    customer_contact='$customer_contact',
-                    customer_email ='$customer_email',
-                    customer_address = '$customer_address'
+                $sql2 = "UPDATE tbl_order SET                                   
+                    status = '$status'                 
                     WHERE id=$id
                 ";
-
                 //execute the Query
                 $res2 = mysqli_query($conn, $sql2);
 
@@ -181,21 +154,10 @@
                     $_SESSION['update'] ="<div class='error'>Failed to  update Order.</div>";
                     header('location:'.SITEURL.'admin/manage-order.php');
                 }
-
-
-
-
-
                 //And Redirect to manage order with message
-
             }
-
         ?>
-
-
-
     </div>
 </div>
-
 
 <?php include('partials/footer.php') ?>
